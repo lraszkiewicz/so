@@ -6,9 +6,9 @@ Zadaniem tej funkcji jest przeanalizowanie stosu i wypisanie szesnastkowo
 adresów funkcji, które zostały wywołane. Adresy należy wypisywać w kolejności
 odwrotnej do kolejności wołania funkcji. Przykładowy wydruk
 
-00000000004006f0
-00000000004007b0
-0000000000400830
+00000000004006f0  
+00000000004007b0  
+0000000000400830  
 00000000004007b0
 
 oznacza, że funkcja main wywołała funkcję o adresie 00000000004007b0.
@@ -34,7 +34,7 @@ w laboratorium komputerowym.
 
 Dodatkowe wyjaśnienia (7 marca 2017)
 
-Nie wolno korzystać z funkcji backtrace() lub tp.
+Nie wolno korzystać z funkcji backtrace() lub tp.  
 Nie wolno korzystać z __builtin_return_address(), __builtin_frame_address() lub
 tp.
 
@@ -42,10 +42,10 @@ Wszystkie wywołania odbywają się za pomocą instrukcji call o opkodzie e8.
 Analizowany kod wykonywalny jest ograniczony zmiennymi zadeklarowanymi
 w skrypcie linkera:
 
-// Pierwszy bajt, gdzie może znajdować się kod wykonywalny.
+// Pierwszy bajt, gdzie może znajdować się kod wykonywalny.  
 extern uint8_t __executable_start;
 
-// Pierwszy bajt, gdzie już nie może znajdować się kod wykonywalny.
+// Pierwszy bajt, gdzie już nie może znajdować się kod wykonywalny.  
 extern uint8_t __etext;
 
 Nie będzie żadnych trików, w których wywołujemy bibliotekę i ta biblioteka woła
