@@ -2,19 +2,24 @@
 
 #include "stack_show.c"
 
-void f3() {
+int f3() {
+  printf("f3\n");
   stack_show();
+  return 5;
 }
 
-void f2() {
-  f3();
+int f2() {
+  printf("f2\n");
+  return f3() + 1;
 }
 
-void f1() {
-  f2();
+int f1() {
+  printf("f1\n");
+  return f2() + 2;
 }
 
 int main() {
+  printf("main\n");
   f1();
   return 0;
 }
