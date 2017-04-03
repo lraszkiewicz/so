@@ -83,6 +83,18 @@ pressedChar:
     jmp readInput
 
 hello:
+    ; save name to disk
+    xor ax, ax
+    mov es, ax      ; buffer address segment
+    mov bx, NAME_BUFFER  ; buffer address offset
+    mov ah, 0x03    ; function code - write sectors to drive
+    mov al, 0x01    ; sectors to write count
+    mov ch, 0x00    ; track
+    mov cl, 0x03    ; sector
+    mov dh, 0x00    ; head
+    mov dl, 0x80    ; drive
+    int 0x13
+    ; sleep
     mov ah, 0x86
     mov cx, 0x1e
     mov dx, 0x8480
