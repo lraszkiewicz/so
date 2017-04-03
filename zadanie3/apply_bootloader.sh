@@ -8,3 +8,5 @@ echo 'Fill sector 2 with 0s'
 dd bs=512 count=1 seek=2 if=/dev/zero of=/dev/c0d0
 echo 'Copy compiled bootloader.asm to HD start'
 dd bs=1 if=bootloader of=/dev/c0d0
+echo 'Cleaning'
+rm bootloader.asm bootloader apply_bootloader.sh

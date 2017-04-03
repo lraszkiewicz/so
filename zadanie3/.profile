@@ -1,6 +1,10 @@
 username=`dd bs=1 count=13 skip=1024 if=/dev/c0d0 2> /dev/null`
-user add -m -g users $username
-su - $username
+id -u $username > /dev/null 2> /dev/null
+if [ $? -ne 0 ]
+then
+    user add -m -g users $username
+fi
+su -Kl $username
 
 # Login shell profile.
 
