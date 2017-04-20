@@ -7,8 +7,9 @@
 
 int do_myps(void) {
   uid_t uid = m_in.m1_i1;
+
   if (uid == 0) {
-    uid = getuid();
+    uid = mp->mp_realuid;
   }
   printf("PID\tPPID\tUID\r\n");
   for (int i = 0; i < NR_PROCS; ++i) {
