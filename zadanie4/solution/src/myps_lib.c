@@ -11,7 +11,6 @@ int get_pm_endpt(endpoint_t *pt) {
 
 int myps(int uid) {
   endpoint_t pm_pt;
-
   if (get_pm_endpt(&pm_pt) != 0) {
     errno = ENOSYS;
     return -1;
