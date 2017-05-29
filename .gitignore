@@ -2,3 +2,5 @@
 **/.idea/tasks.xml
 **/cmake-build-debug/
 svn/
+minix.img
+5/
