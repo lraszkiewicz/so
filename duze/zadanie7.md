@@ -81,12 +81,12 @@ Drugi termin upływa 28.08.2017 o godz. 19.
 
 ## Ocena
 
-2 pkt. – testy automatyczne
-2 pkt. – przygotowanie testów wydajnościowych rozwiązania
-1 pkt  – opis rozwiązania
-1 pkt  – prezentacje wyników testów wydajnościowych, np. w postaci tabelki lub wykresu
-1 pkt  – poprawność i powtarzalność eksperymentów
-1 pkt  – jasność opisu i zgodność z formatem
+- 2 pkt. – testy automatyczne
+- 2 pkt. – przygotowanie testów wydajnościowych rozwiązania
+- 1 pkt  – opis rozwiązania
+- 1 pkt  – prezentacje wyników testów wydajnościowych, np. w postaci tabelki lub wykresu
+- 1 pkt  – poprawność i powtarzalność eksperymentów
+- 1 pkt  – jasność opisu i zgodność z formatem
 
 Jeśli rozwiązanie z testów automatycznych otrzymuje 0 pkt., to ocena jest 0 pkt.
 
