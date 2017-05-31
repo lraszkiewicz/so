@@ -272,6 +272,23 @@ int *completed;			/* number of bytes copied */
 		/* Writing to or peeking a nonexistent block.
 		 * Create and enter in inode.
 		 */
+
+		/* Load the 'chunk' bytes to write to disk into an array. */
+		char tmp_buf[chunk];
+		r = sys_safecopyfrom(VFS_PROC_NR, gid, (vir_bytes) buf_off,
+				     (vir_bytes) tmp_buf, (size_t) chunk);
+		/* Check if trying to write only zeroes. */
+		int only_zeroes = 1;
+		for (int i = 0; i < chunk; ++i) {
+			if (tmp_buf[i] != 0) {
+				only_zeroes = 0;
+				break;
+			}
+		}
+		/* If only zeroes, don't actually write anything to disk. */
+		if (only_zeroes)
+			return(r);
+
 		if ((bp = new_block(rip, (off_t) ex64lo(position))) == NULL)
 			return(err_code);
 	}
