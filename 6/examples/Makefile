@@ -1,5 +1,5 @@
 .include <bsd.own.mk>
 
-SUBDIR+=	hello
+SUBDIR+=	hello helloN
 
 .include <bsd.subdir.mk>
